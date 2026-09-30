@@ -1,0 +1,257 @@
+{
+  "seed": 42,
+  "corpus": [
+    "the cat sat on the mat",
+    "the cat sat on the rug",
+    "the dog sat on the mat",
+    "the dog ran to the park",
+    "the cat ran to the park",
+    "the dog sat on the rug"
+  ],
+  "first_order": {
+    "cpt": {
+      "<START>": {
+        "the": 1.0
+      },
+      "cat": {
+        "ran": 0.3333333333333333,
+        "sat": 0.6666666666666666
+      },
+      "dog": {
+        "ran": 0.3333333333333333,
+        "sat": 0.6666666666666666
+      },
+      "mat": {
+        "<END>": 1.0
+      },
+      "on": {
+        "the": 1.0
+      },
+      "park": {
+        "<END>": 1.0
+      },
+      "ran": {
+        "to": 1.0
+      },
+      "rug": {
+        "<END>": 1.0
+      },
+      "sat": {
+        "on": 1.0
+      },
+      "the": {
+        "cat": 0.25,
+        "dog": 0.25,
+        "mat": 0.16666666666666666,
+        "park": 0.16666666666666666,
+        "rug": 0.16666666666666666
+      },
+      "to": {
+        "the": 1.0
+      }
+    },
+    "normalization_totals": {
+      "<START>": 1.0,
+      "cat": 1.0,
+      "dog": 1.0,
+      "mat": 1.0,
+      "on": 1.0,
+      "park": 1.0,
+      "ran": 1.0,
+      "rug": 1.0,
+      "sat": 1.0,
+      "the": 1.0,
+      "to": 1.0
+    },
+    "predictions": {
+      "<START>": "the",
+      "cat": "sat",
+      "dog": "sat",
+      "mat": "<END>",
+      "on": "the",
+      "park": "<END>",
+      "ran": "to",
+      "rug": "<END>",
+      "sat": "on",
+      "the": "cat",
+      "to": "the"
+    },
+    "stats": {
+      "candidate_contexts": 11,
+      "observed_contexts": 11,
+      "unobserved_contexts": 0,
+      "dense_cpt_entries": 121,
+      "nonzero_cpt_entries": 17,
+      "free_parameters_in_observed_rows": 6
+    },
+    "samples_20": [
+      "the cat ran to the park",
+      "the dog ran to the cat ran to the cat sat on the park",
+      "the cat sat on the cat sat on the park",
+      "the dog sat on the rug",
+      "the cat ran to the cat ran to the dog sat on the rug",
+      "the cat sat on the rug",
+      "the park",
+      "the cat ran to the cat sat on the mat",
+      "the dog ran to the dog sat on the cat sat on the cat ran to the dog ran to the mat",
+      "the cat sat on the dog sat on the dog sat on the mat",
+      "the rug",
+      "the mat",
+      "the mat",
+      "the cat ran to the rug",
+      "the cat sat on the dog ran to the cat sat on the rug",
+      "the mat",
+      "the dog sat on the mat",
+      "the dog sat on the cat sat on the rug",
+      "the park",
+      "the rug"
+    ],
+    "unique_sampled_sentences": 16,
+    "greedy_5": [
+      "the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat [TRUNCATED: no END]",
+      "the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat [TRUNCATED: no END]",
+      "the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat [TRUNCATED: no END]",
+      "the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat [TRUNCATED: no END]",
+      "the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on the cat [TRUNCATED: no END]"
+    ],
+    "sampled_5": [
+      "the cat ran to the park",
+      "the park",
+      "the mat",
+      "the dog ran to the cat ran to the park",
+      "the dog sat on the mat"
+    ]
+  },
+  "second_order": {
+    "cpt": {
+      "<START> | <START>": {
+        "the": 1.0
+      },
+      "<START> | the": {
+        "cat": 0.5,
+        "dog": 0.5
+      },
+      "cat | ran": {
+        "to": 1.0
+      },
+      "cat | sat": {
+        "on": 1.0
+      },
+      "dog | ran": {
+        "to": 1.0
+      },
+      "dog | sat": {
+        "on": 1.0
+      },
+      "on | the": {
+        "mat": 0.5,
+        "rug": 0.5
+      },
+      "ran | to": {
+        "the": 1.0
+      },
+      "sat | on": {
+        "the": 1.0
+      },
+      "the | cat": {
+        "ran": 0.3333333333333333,
+        "sat": 0.6666666666666666
+      },
+      "the | dog": {
+        "ran": 0.3333333333333333,
+        "sat": 0.6666666666666666
+      },
+      "the | mat": {
+        "<END>": 1.0
+      },
+      "the | park": {
+        "<END>": 1.0
+      },
+      "the | rug": {
+        "<END>": 1.0
+      },
+      "to | the": {
+        "park": 1.0
+      }
+    },
+    "normalization_totals": {
+      "<START> | <START>": 1.0,
+      "<START> | the": 1.0,
+      "cat | ran": 1.0,
+      "cat | sat": 1.0,
+      "dog | ran": 1.0,
+      "dog | sat": 1.0,
+      "on | the": 1.0,
+      "ran | to": 1.0,
+      "sat | on": 1.0,
+      "the | cat": 1.0,
+      "the | dog": 1.0,
+      "the | mat": 1.0,
+      "the | park": 1.0,
+      "the | rug": 1.0,
+      "to | the": 1.0
+    },
+    "predictions": {
+      "<START> | <START>": "the",
+      "<START> | the": "cat",
+      "cat | ran": "to",
+      "cat | sat": "on",
+      "dog | ran": "to",
+      "dog | sat": "on",
+      "on | the": "mat",
+      "ran | to": "the",
+      "sat | on": "the",
+      "the | cat": "sat",
+      "the | dog": "sat",
+      "the | mat": "<END>",
+      "the | park": "<END>",
+      "the | rug": "<END>",
+      "to | the": "park"
+    },
+    "stats": {
+      "candidate_contexts": 111,
+      "observed_contexts": 15,
+      "unobserved_contexts": 96,
+      "dense_cpt_entries": 1221,
+      "nonzero_cpt_entries": 19,
+      "free_parameters_in_observed_rows": 4
+    },
+    "samples_20": [
+      "the cat ran to the park",
+      "the cat ran to the park",
+      "the dog ran to the park",
+      "the cat ran to the park",
+      "the dog sat on the rug",
+      "the dog sat on the rug",
+      "the cat ran to the park",
+      "the cat ran to the park",
+      "the dog ran to the park",
+      "the dog sat on the mat",
+      "the dog sat on the mat",
+      "the cat ran to the park",
+      "the cat sat on the mat",
+      "the dog sat on the rug",
+      "the dog ran to the park",
+      "the cat sat on the rug",
+      "the cat sat on the rug",
+      "the dog sat on the mat",
+      "the dog sat on the mat",
+      "the cat sat on the rug"
+    ],
+    "unique_sampled_sentences": 6,
+    "greedy_5": [
+      "the cat sat on the mat",
+      "the cat sat on the mat",
+      "the cat sat on the mat",
+      "the cat sat on the mat",
+      "the cat sat on the mat"
+    ],
+    "sampled_5": [
+      "the cat ran to the park",
+      "the dog ran to the park",
+      "the dog sat on the mat",
+      "the cat ran to the park",
+      "the cat sat on the rug"
+    ]
+  }
+}
